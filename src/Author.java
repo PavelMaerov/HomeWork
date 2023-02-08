@@ -13,5 +13,23 @@ public class Author {
     public String getSecondName() {
         return (secondName);
     }
+    //Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
+    @Override
+    public String toString() {
+        return firstName + " " +secondName;
+    }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author author2 = (Author) other;
+        return firstName.equals(author2.firstName) &
+                secondName.equals(author2.secondName);
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(firstName, secondName);
+    }
 }
 
