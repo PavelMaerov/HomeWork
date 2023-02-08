@@ -14,5 +14,16 @@ public class Main {
         System.out.println("book2.getAuthor().getFirstName() = " + book2.getAuthor().getFirstName());
         System.out.println("book2.getAuthor().getSecondName() = " + book2.getAuthor().getSecondName());
         System.out.println("book2.getPublicationYear() = " + book2.getPublicationYear());
+        System.out.println();
+        System.out.println("Урок2");
+        System.out.println(book1);
+        System.out.println(book2);
+        System.out.println("book1.equals(book2) = " + book1.equals(book2));
+        System.out.println("book1.getAuthor().equals(book2) = " + book1.getAuthor().equals(book2));
+
+        Book book3 = new Book("Headless Horseman",new Author("Mayne","Reid"),1865);
+        System.out.println("book1==book3 = " + (book1==book3));
+        System.out.println("book1.equals(book3) = " + book1.equals(book3));
+        System.out.println("book1.hashCode()==book3.hashCode() = " + (book1.hashCode()==book3.hashCode()));
     }
 }

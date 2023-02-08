@@ -27,6 +27,25 @@ public class Book {
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
+    //Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
+    @Override
+    public String toString() {
+        return author + ", " + name + ", " + publicationYear;  //вызовется наш author.toString()
+    }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book book2 = (Book) other;
+        return name.equals(book2.name) &
+                author.equals(book2.author) &
+                publicationYear==book2.publicationYear;
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name, author, publicationYear);
+    }
 }
 
 
